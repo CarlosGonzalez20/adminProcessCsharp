@@ -1,0 +1,14 @@
+C:\Users\ll322\source\repos\AdminProcess\AdminProcess\bin\Debug\AdminProcess.exe.config
+C:\Users\ll322\source\repos\AdminProcess\AdminProcess\bin\Debug\AdminProcess.exe
+C:\Users\ll322\source\repos\AdminProcess\AdminProcess\bin\Debug\AdminProcess.pdb
+C:\Users\ll322\source\repos\AdminProcess\AdminProcess\obj\Debug\AdminProcess.csproj.AssemblyReference.cache
+C:\Users\ll322\source\repos\AdminProcess\AdminProcess\obj\Debug\AdminProcess.Properties.Resources.resources
+C:\Users\ll322\source\repos\AdminProcess\AdminProcess\obj\Debug\AdminProcess.csproj.GenerateResource.cache
+C:\Users\ll322\source\repos\AdminProcess\AdminProcess\obj\Debug\AdminProcess.csproj.CoreCompileInputs.cache
+C:\Users\ll322\source\repos\AdminProcess\AdminProcess\obj\Debug\AdminProcess.exe
+C:\Users\ll322\source\repos\AdminProcess\AdminProcess\obj\Debug\AdminProcess.pdb
+C:\Users\ll322\source\repos\AdminProcess\AdminProcess\bin\Debug\MetroFramework.Design.dll
+C:\Users\ll322\source\repos\AdminProcess\AdminProcess\bin\Debug\MetroFramework.dll
+C:\Users\ll322\source\repos\AdminProcess\AdminProcess\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\ll322\source\repos\AdminProcess\AdminProcess\obj\Debug\AdminProcess.Form1.resources
+C:\Users\ll322\source\repos\AdminProcess\AdminProcess\obj\Debug\AdminProcess.csproj.CopyComplete

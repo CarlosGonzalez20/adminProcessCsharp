@@ -12,3 +12,10 @@ C:\Users\MEY\OneDrive - Universidad Mariano Gálvez\Sexto Semestre\Sistemas Oper
 C:\Users\MEY\OneDrive - Universidad Mariano Gálvez\Sexto Semestre\Sistemas Operativos\Proyecto-modulo2\Proyecto\Proyecto\bin\Debug\MetroFramework.Fonts.dll
 C:\Users\MEY\OneDrive - Universidad Mariano Gálvez\Sexto Semestre\Sistemas Operativos\Proyecto-modulo2\Proyecto\Proyecto\obj\Debug\Proyecto.tareas.resources
 C:\Users\MEY\OneDrive - Universidad Mariano Gálvez\Sexto Semestre\Sistemas Operativos\Proyecto-modulo2\Proyecto\Proyecto\obj\Debug\Proyecto.csproj.CopyComplete
+C:\Users\ll322\Downloads\ProyC#\adminProcessCsharp\Proyecto\obj\Debug\Proyecto.csproj.AssemblyReference.cache
+C:\Users\ll322\Downloads\ProyC#\adminProcessCsharp\Proyecto\obj\Debug\Proyecto.tareas.resources
+C:\Users\ll322\Downloads\ProyC#\adminProcessCsharp\Proyecto\obj\Debug\Proyecto.Properties.Resources.resources
+C:\Users\ll322\Downloads\ProyC#\adminProcessCsharp\Proyecto\obj\Debug\Proyecto.csproj.GenerateResource.cache
+C:\Users\ll322\Downloads\ProyC#\adminProcessCsharp\Proyecto\obj\Debug\Proyecto.csproj.CoreCompileInputs.cache
+C:\Users\ll322\Downloads\ProyC#\adminProcessCsharp\Proyecto\obj\Debug\Proyecto.exe
+C:\Users\ll322\Downloads\ProyC#\adminProcessCsharp\Proyecto\obj\Debug\Proyecto.pdb

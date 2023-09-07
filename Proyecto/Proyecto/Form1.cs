@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Linq.Expressions;
 
 namespace Proyecto
 {
@@ -56,8 +57,25 @@ namespace Proyecto
 
         private void btnDetener_Click(object sender, EventArgs e)
         {
+            try
+            {
+                foreach (Process p in Process.GetProcesses())
+                {
 
+
+                    if (p.ProcessName == txtNombreProceso.Text)
+                    {
+                        p.Kill(); // elimina el proceso
+                    }
+
+                }
+            }
+            catch (Exception x)
+            {
+                MessageBox.Show("No seleccionó ningún proceso" + x,"Error al eliminar", MessageBoxButtons.OK)
+            }
         }
+        
 
         private void btnSalir_Click(object sender, EventArgs e)
         {

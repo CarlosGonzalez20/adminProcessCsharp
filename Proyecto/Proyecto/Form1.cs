@@ -19,8 +19,8 @@ namespace Proyecto
         {
             InitializeComponent();
             UpdateProcessList();
-            System.Timers.Timer temporizador = new System.Timers.Timer(2000);
-            temporizador.Enabled = true;
+            //System.Timers.Timer temporizador = new System.Timers.Timer(2000);
+            timer1.Enabled = true;
             //temporizador.Elapsed += (s, e) => UpdateProcessList();
         }
 
@@ -36,13 +36,14 @@ namespace Proyecto
                 dgvAdministrador.Rows[n].Cells[3].Value = p.VirtualMemorySize64;
                 dgvAdministrador.Rows[n].Cells[4].Value = p.SessionId;
             }
+            dgvAdministrador.Sort(dgvAdministrador.Columns[0], ListSortDirection.Ascending);
             txtContador.Text = "Procesos activos: "+dgvAdministrador.Rows.Count.ToString();
             Console.WriteLine("Lista actualizada");
         }
 
         private void dgvAdministrador_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            txtNombreProceso.Text = dgvAdministrador.CurrentRow.Cells[0].Value.ToString();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -57,6 +58,10 @@ namespace Proyecto
 
         private void btnDetener_Click(object sender, EventArgs e)
         {
+            if (dgvAdministrador.SelectedRows.Count>0)
+            {
+                //
+            }
             try
             {
                 foreach (Process p in Process.GetProcesses())
@@ -72,8 +77,10 @@ namespace Proyecto
             }
             catch (Exception x)
             {
-                MessageBox.Show("No seleccionó ningún proceso" + x,"Error al eliminar", MessageBoxButtons.OK)
+                MessageBox.Show("No seleccionó ningún proceso" + x, "Error al eliminar", MessageBoxButtons.OK);
             }
+
+
         }
         
 
@@ -85,6 +92,11 @@ namespace Proyecto
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            UpdateProcessList();
         }
     }
 }

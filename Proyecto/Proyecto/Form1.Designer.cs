@@ -28,21 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvAdministrador = new MetroFramework.Controls.MetroGrid();
+            this.dgvProceso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvFisica = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvVirtual = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvCPU = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnActualizar = new MetroFramework.Controls.MetroTile();
             this.btnDetener = new MetroFramework.Controls.MetroTile();
             this.btnSalir = new MetroFramework.Controls.MetroTile();
             this.txtContador = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNombreProceso = new System.Windows.Forms.Label();
-            this.dgvCPU = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvVirtual = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvFisica = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvProceso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdministrador)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,14 +55,14 @@
             this.dgvAdministrador.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvAdministrador.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvAdministrador.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(173)))));
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(206)))));
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAdministrador.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(173)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(206)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAdministrador.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvAdministrador.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAdministrador.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvProceso,
@@ -68,29 +70,29 @@
             this.dgvFisica,
             this.dgvVirtual,
             this.dgvCPU});
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(206)))));
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAdministrador.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(206)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAdministrador.DefaultCellStyle = dataGridViewCellStyle11;
             this.dgvAdministrador.EnableHeadersVisualStyles = false;
             this.dgvAdministrador.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgvAdministrador.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dgvAdministrador.Location = new System.Drawing.Point(20, 64);
-            this.dgvAdministrador.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvAdministrador.Margin = new System.Windows.Forms.Padding(4);
             this.dgvAdministrador.Name = "dgvAdministrador";
             this.dgvAdministrador.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(173)))));
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(206)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAdministrador.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(173)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(206)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAdministrador.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvAdministrador.RowHeadersWidth = 51;
             this.dgvAdministrador.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvAdministrador.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -100,12 +102,47 @@
             this.dgvAdministrador.Theme = MetroFramework.MetroThemeStyle.Light;
             this.dgvAdministrador.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAdministrador_CellContentClick);
             // 
+            // dgvProceso
+            // 
+            this.dgvProceso.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgvProceso.HeaderText = "Proceso";
+            this.dgvProceso.MinimumWidth = 6;
+            this.dgvProceso.Name = "dgvProceso";
+            // 
+            // dgvID
+            // 
+            this.dgvID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgvID.HeaderText = "ID";
+            this.dgvID.MinimumWidth = 6;
+            this.dgvID.Name = "dgvID";
+            // 
+            // dgvFisica
+            // 
+            this.dgvFisica.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgvFisica.HeaderText = "Memoria Fisica";
+            this.dgvFisica.MinimumWidth = 6;
+            this.dgvFisica.Name = "dgvFisica";
+            // 
+            // dgvVirtual
+            // 
+            this.dgvVirtual.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgvVirtual.HeaderText = "Memoria Virtual";
+            this.dgvVirtual.MinimumWidth = 6;
+            this.dgvVirtual.Name = "dgvVirtual";
+            // 
+            // dgvCPU
+            // 
+            this.dgvCPU.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgvCPU.HeaderText = "CPU";
+            this.dgvCPU.MinimumWidth = 6;
+            this.dgvCPU.Name = "dgvCPU";
+            // 
             // btnActualizar
             // 
             this.btnActualizar.ActiveControl = null;
             this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnActualizar.Location = new System.Drawing.Point(20, 467);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(140, 44);
             this.btnActualizar.Style = MetroFramework.MetroColorStyle.Green;
@@ -121,7 +158,7 @@
             this.btnDetener.ActiveControl = null;
             this.btnDetener.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDetener.Location = new System.Drawing.Point(195, 467);
-            this.btnDetener.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDetener.Margin = new System.Windows.Forms.Padding(4);
             this.btnDetener.Name = "btnDetener";
             this.btnDetener.Size = new System.Drawing.Size(140, 44);
             this.btnDetener.Style = MetroFramework.MetroColorStyle.Red;
@@ -137,7 +174,7 @@
             this.btnSalir.ActiveControl = null;
             this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalir.Location = new System.Drawing.Point(968, 467);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(140, 44);
             this.btnSalir.Style = MetroFramework.MetroColorStyle.Orange;
@@ -179,40 +216,10 @@
             this.txtNombreProceso.TabIndex = 6;
             this.txtNombreProceso.Text = "0";
             // 
-            // dgvCPU
+            // timer1
             // 
-            this.dgvCPU.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgvCPU.HeaderText = "CPU";
-            this.dgvCPU.MinimumWidth = 6;
-            this.dgvCPU.Name = "dgvCPU";
-            // 
-            // dgvVirtual
-            // 
-            this.dgvVirtual.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgvVirtual.HeaderText = "Memoria Virtual";
-            this.dgvVirtual.MinimumWidth = 6;
-            this.dgvVirtual.Name = "dgvVirtual";
-            // 
-            // dgvFisica
-            // 
-            this.dgvFisica.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgvFisica.HeaderText = "Memoria Fisica";
-            this.dgvFisica.MinimumWidth = 6;
-            this.dgvFisica.Name = "dgvFisica";
-            // 
-            // dgvID
-            // 
-            this.dgvID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgvID.HeaderText = "ID";
-            this.dgvID.MinimumWidth = 6;
-            this.dgvID.Name = "dgvID";
-            // 
-            // dgvProceso
-            // 
-            this.dgvProceso.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgvProceso.HeaderText = "Proceso";
-            this.dgvProceso.MinimumWidth = 6;
-            this.dgvProceso.Name = "dgvProceso";
+            this.timer1.Interval = 10000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
@@ -226,7 +233,7 @@
             this.Controls.Add(this.btnDetener);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.dgvAdministrador);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Text = "Administrador de Tareas";
@@ -251,6 +258,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvFisica;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvVirtual;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvCPU;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

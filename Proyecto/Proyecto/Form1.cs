@@ -59,33 +59,44 @@ namespace Proyecto
             //Esta función está siendo ejecutada por medio de un contador o temporizador. Esta función se ejecuta cada 10 segundos
         }
 
+        
+        
+        // En esta parte se maneja el evento de hacer clic en una celda del DataGridView
         private void dgvAdministrador_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            // Primero se muestra el nombre del proceso seleccionado en un cuadro de texto
             txtNombreProceso.Text = dgvAdministrador.CurrentRow.Cells[0].Value.ToString();
         }
 
+        // En esta parte encontramos, el evento de carga del formulario (opcional)
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
-
+        // En esta otra parte se esta trabajando con el boton de Actualizar
+        // Por ello, se maneja el evento de hacer clic en el boton de Actualizar
         private void btnActualizar_Click(object sender, EventArgs e)
         {
+            // Llama a la funcion para actualizar manualmente 
             UpdateProcessList();
         }
-
+        // En esta parte se esta trabajando con el boton de Detener 
+        // Por ello, se maneja el evento de hacer clic en el boton de Deter 
         private void btnDetener_Click(object sender, EventArgs e)
         {
+            // Primero verifica si se selecciono una fila en el DataGridView
             if (dgvAdministrador.SelectedRows.Count>0)
             {
-                //
+
+                // Este bloque de codigo se ejecutara solo si se ha seleccionado al menos una fila en el DataGridView.
             }
             try
             {
+                //Utiliza un bucle foreach para recorrer todos los procesos en ejecución en el sistema.
                 foreach (Process p in Process.GetProcesses())
                 {
 
-
+                    // Compara el nombre del proceso actual con el texto en el cuadro de texto txtNombreProceso.
                     if (p.ProcessName == txtNombreProceso.Text)
                     {
                         p.Kill(); // elimina el proceso
@@ -95,23 +106,24 @@ namespace Proyecto
             }
             catch (Exception x)
             {
+                // Muestra un cuadro de diálogo de mensaje en caso de un error
                 MessageBox.Show("No seleccionó ningún proceso" + x, "Error al eliminar", MessageBoxButtons.OK);
             }
 
 
         }
-        
-
+        // En esta parte se esta trabajando con el boton de Salir
+        // Por ello se maneja el evento de hacer clic en el botón "Salir" para cerrar la aplicación
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Close();
         }
-
+        // Encontramos un evento de clic en un label (puede estar vacío en este caso).
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
-
+        // Y finalmente se maneja el evento del temporizador (timer1) para actualizar automáticamente la lista de procesos.
         private void timer1_Tick(object sender, EventArgs e)
         {
             UpdateProcessList();
